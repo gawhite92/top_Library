@@ -13,8 +13,8 @@ body {
     gap:3px;
     /*background-color: rgb(151, 151, 151);*/
     background-image: url(./images/janko-ferlic-sfL_QOnmy00-unsplash.jpg);
-    background-position: 0px -600px;
-    background-size: 133%
+    background-position: 50% 50%;
+    background-size: cover;
 }
 
 .header {
@@ -34,6 +34,7 @@ body {
 .sidebar>button {
     height:50px;
     margin: 10px 10px 5px 10px;
+    cursor:pointer;
 }
 
 .cardContainer {
@@ -60,24 +61,44 @@ body {
     align-items: center;
 }
 
-.card {
-    margin-top:20px;
-    font-size: 20px;
+.cardReadButton,
+.cardRemoveButton {
+    height: 30px;
+    width: 50px;
+    background-color: lightgrey;
+    color:black;
+}
+
+.card .cardReadButton {
+    position: absolute;
+    top: 3%;
+    left: 10%;
+}
+
+
+.card .cardRemoveButton {
+    position: absolute;
+    top: 3%;
+    right: 10%;
+    background-color: red;
     color:white;
+}
+
+.card {
+    margin-top:9px;
+    font-size: 18px;
+    color:white;
+    position: relative;
+    text-align: center;
 }
 
 .cardTitle {
     font-weight: bold;
 }
 
-.readStatus {
-    color:rgb(0, 195, 0);
-}
-
 .cardAuthor,
-.pages,
-.readStatus {
-    font-size: 13px;
+.cardPages {
+    font-size: 12px;
 }
 
 .card>img {
@@ -96,4 +117,8 @@ margin-bottom: 5px;
 .cardContainer,
 .footer {
     background-color: rgba(0, 0, 0, 0.541)
+}
+
+img {
+    cursor: pointer;
 }

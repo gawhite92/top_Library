@@ -24,8 +24,10 @@ function addBookToLibrary() {
     }
     const newBook = new Book(title, author, pages, read); // uses constructor to create book
     myLibrary.push(newBook); // adds new book to library
+    createDisplayCard();
     console.log(`Library contents:`)
     console.table(myLibrary);
+
 }
 
 function displayBooks() {
@@ -33,3 +35,61 @@ function displayBooks() {
         console.log(book);
     })
 }
+
+function displayAllBooksInLibrary() {
+    myLibrary.forEach(function (book) {
+        title = book.title;
+        author = book.author;
+        pages = book.pages;
+        read = book.read;
+        createDisplayCard()
+    })
+}
+
+function reset() {
+    const cardContainer = document.querySelector(".cardContainer");
+    const card = document.querySelector(".card");
+    while (cardContainer.lastElementChild) {
+        cardContainer.removeChild(cardContainer.lastElementChild);
+    }
+}
+
+    function createDisplayCard() {
+        const cardContainer = document.querySelector(".cardContainer");
+
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        const cardPhoto = document.createElement("img")
+        cardPhoto.src = `./images/${title}.jpg`;
+        cardPhoto.classList.add("cardPhoto");
+
+        const cardTitle = document.createElement("p");
+        cardTitle.classList.add("cardTitle");
+        cardTitle.textContent = `${title}`;
+
+        const cardAuthor = document.createElement("p");
+        cardAuthor.classList.add("cardAuthor");
+        cardAuthor.textContent = `${author}`;
+
+        const cardPages = document.createElement("p");
+        cardPages.classList.add("cardPages");
+        cardPages.textContent = `${pages}`;
+
+        const cardReadButton = document.createElement("button");
+        cardReadButton.classList.add("cardReadButton");
+        cardReadButton.textContent = "Read";
+
+        const cardRemoveButton = document.createElement("button");
+        cardRemoveButton.classList.add("cardRemoveButton");
+        cardRemoveButton.textContent = "X";
+
+
+        cardContainer.appendChild(card);
+        card.appendChild(cardPhoto);
+        card.appendChild(cardTitle);
+        card.appendChild(cardAuthor);
+        card.appendChild(cardPages);
+        card.appendChild(cardReadButton);
+        card.appendChild(cardRemoveButton);
+    }

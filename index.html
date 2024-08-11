@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -14,96 +15,23 @@
     </div>
 
     <div class="sidebar">
-        <button class="homeButton">Home</button>
-        <button class="libraryButton">Library</button>
-        <button class="newBookButton">New Book</button>
+        <button onclick="reset()" class="homeButton">Home</button>
+        <button onclick="displayAllBooksInLibrary()" class="libraryButton">Library</button>
+        <button onclick="addBookToLibrary()" class="newBookButton">New Book</button>
     </div>
     <div class="cardContainer">
-        <div class="card">
+        <!-- TESTING
+         <div class="card">
             <img class="cardPhoto" src="./images/LOTR Book Cover (amazon).jpg">
             <p class="cardTitle">The Lord Of The Rings</p>
             <p class="cardAuthor">JRR Tolkien</p>
-            <p class="pages">1000</p>
-            <p class="readStatus">Read</p>
+            <p class="cardPages">1000 pages</p>
+            <button class="cardReadButton">Read</button>
+            <button class="cardRemoveButton">X</button>
         </div>
-        <div class="card">
-            <img class="cardPhoto" src="./images/LOTR Book Cover (amazon).jpg">
-            <p class="cardTitle">The Lord Of The Rings</p>
-            <p class="cardAuthor">JRR Tolkien</p>
-            <p class="pages">1000</p>
-            <p class="readStatus">Read</p>
-        </div>
-        <div class="card">
-            <img class="cardPhoto" src="./images/LOTR Book Cover (amazon).jpg">
-            <p class="cardTitle">The Lord Of The Rings</p>
-            <p class="cardAuthor">JRR Tolkien</p>
-            <p class="pages">1000</p>
-            <p class="readStatus">Read</p>
-        </div>
-        <div class="card">
-            <img class="cardPhoto" src="./images/LOTR Book Cover (amazon).jpg">
-            <p class="cardTitle">The Lord Of The Rings</p>
-            <p class="cardAuthor">JRR Tolkien</p>
-            <p class="pages">1000</p>
-            <p class="readStatus">Read</p>
-        </div>
-        <div class="card">
-            <img class="cardPhoto" src="./images/LOTR Book Cover (amazon).jpg">
-            <p class="cardTitle">The Lord Of The Rings</p>
-            <p class="cardAuthor">JRR Tolkien</p>
-            <p class="pages">1000</p>
-            <p class="readStatus">Read</p>
-        </div>
-        <div class="card">
-            <img class="cardPhoto" src="./images/LOTR Book Cover (amazon).jpg">
-            <p class="cardTitle">The Lord Of The Rings</p>
-            <p class="cardAuthor">JRR Tolkien</p>
-            <p class="pages">1000</p>
-            <p class="readStatus">Read</p>
-        </div>
-        <div class="card">
-            <img class="cardPhoto" src="./images/LOTR Book Cover (amazon).jpg">
-            <p class="cardTitle">The Lord Of The Rings</p>
-            <p class="cardAuthor">JRR Tolkien</p>
-            <p class="pages">1000</p>
-            <p class="readStatus">Read</p>
-        </div>
-        <div class="card">
-            <img class="cardPhoto" src="./images/LOTR Book Cover (amazon).jpg">
-            <p class="cardTitle">The Lord Of The Rings</p>
-            <p class="cardAuthor">JRR Tolkien</p>
-            <p class="pages">1000</p>
-            <p class="readStatus">Read</p>
-        </div>
-        <div class="card">
-            <img class="cardPhoto" src="./images/LOTR Book Cover (amazon).jpg">
-            <p class="cardTitle">The Lord Of The Rings</p>
-            <p class="cardAuthor">JRR Tolkien</p>
-            <p class="pages">1000</p>
-            <p class="readStatus">Read</p>
-        </div>
-        <div class="card">
-            <img class="cardPhoto" src="./images/LOTR Book Cover (amazon).jpg">
-            <p class="cardTitle">The Lord Of The Rings</p>
-            <p class="cardAuthor">JRR Tolkien</p>
-            <p class="pages">1000</p>
-            <p class="readStatus">Read</p>
-        </div>
-        <div class="card">
-            <img class="cardPhoto" src="./images/LOTR Book Cover (amazon).jpg">
-            <p class="cardTitle">The Lord Of The Rings</p>
-            <p class="cardAuthor">JRR Tolkien</p>
-            <p class="pages">1000</p>
-            <p class="readStatus">Read</p>
-        </div>
-        <div class="card">
-            <img class="cardPhoto" src="./images/LOTR Book Cover (amazon).jpg">
-            <p class="cardTitle">The Lord Of The Rings</p>
-            <p class="cardAuthor">JRR Tolkien</p>
-            <p class="pages">1000</p>
-            <p class="readStatus">Read</p>
-        </div>
+-->
     </div>
-    
+
 </body>
+
 </html>
