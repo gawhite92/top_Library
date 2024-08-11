@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display:grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 6fr;
+    grid-template-areas: "header header"
+                         "sidebar cardContainer";
+    height: 900px;
+    gap:3px;
+    /*background-color: rgb(151, 151, 151);*/
+    background-image: url(./images/janko-ferlic-sfL_QOnmy00-unsplash.jpg);
+    background-position: 0px -600px;
+    background-size: 133%
+}
+
+.header {
+    grid-area: header;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar>button {
+    height:50px;
+    margin: 10px 10px 5px 10px;
+}
+
+.cardContainer {
+    grid-area: cardContainer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    overflow:scroll;
+    overflow-x: hidden;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.cardContainer>.card {
+    display:flex;
+    flex-direction: column;
+    overflow:hidden;
+    height: 380px;
+    width: 240px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin-top:20px;
+    font-size: 20px;
+    color:white;
+}
+
+.cardTitle {
+    font-weight: bold;
+}
+
+.readStatus {
+    color:rgb(0, 195, 0);
+}
+
+.cardAuthor,
+.pages,
+.readStatus {
+    font-size: 13px;
+}
+
+.card>img {
+height: 300px;
+width:fit-content;
+margin-bottom: 5px;
+}
+
+.header>p{
+    color:white;
+    font-weight: bold;
+}
+
+.header,
+.sidebar,
+.cardContainer,
+.footer {
+    background-color: rgba(0, 0, 0, 0.541)
+}
