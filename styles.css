@@ -5,7 +5,7 @@
 
 body {
     display:grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 0.8fr 6fr;
     grid-template-rows: 1fr 6fr;
     grid-template-areas: "header header"
                          "sidebar cardContainer";
@@ -17,7 +17,7 @@ body {
     background-size: cover;
 }
 
-.header {
+#header {
     grid-area: header;
     display:flex;
     justify-content: center;
@@ -25,19 +25,51 @@ body {
     font-size: 80px;
 }
 
-.sidebar {
+#sidebar {
     grid-area: sidebar;
     display: flex;
     flex-direction: column;
+    align-content: center;
+    min-width: 180px;
 }
 
-.sidebar>button {
-    height:50px;
+#sidebar>button {
+    height: 50px;
     margin: 10px 10px 5px 10px;
     cursor:pointer;
 }
 
-.cardContainer {
+#form {
+    display:flex;
+    flex-direction: column;
+    margin-top: 80px;
+    align-items: center;
+}
+
+#form>input {
+    height: 30px;
+    width: 80%;
+    margin: 10px 10px 5px 10px;
+}
+
+#form>button {
+    height: 30px;
+    width: 50px;
+}
+
+
+#checkboxcontainer>label,
+p {
+    color:white;
+    margin-right: 5px;
+}
+
+#checkboxcontainer {
+    height: 30px;
+    align-content: center;
+}
+
+#cardContainer {
     grid-area: cardContainer;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -47,11 +79,11 @@ body {
     overflow-x: hidden;
 }
 
-.footer {
+#footer {
     grid-area: footer;
 }
 
-.cardContainer>.card {
+#cardContainer>.card {
     display:flex;
     flex-direction: column;
     overflow:hidden;
@@ -103,22 +135,27 @@ body {
 
 .card>img {
 height: 300px;
-width:fit-content;
+width: 200px;
 margin-bottom: 5px;
 }
 
-.header>p{
+#header>p{
     color:white;
     font-weight: bold;
 }
 
-.header,
-.sidebar,
-.cardContainer,
-.footer {
+#header,
+#sidebar,
+#cardContainer,
+#footer {
     background-color: rgba(0, 0, 0, 0.541)
 }
 
 img {
     cursor: pointer;
+}
+
+.cardReadButton.read{
+    background-color: green;
+    color: white;
 }

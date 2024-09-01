@@ -10,17 +10,28 @@
 </head>
 
 <body>
-    <div class="header">
+    <div id="header">
         <p>Library</p>
     </div>
 
-    <div class="sidebar">
-        <button onclick="reset()" class="homeButton">Home</button>
-        <button onclick="displayAllBooksInLibrary()" class="libraryButton">Library</button>
-        <button onclick="addBookToLibrary()" class="newBookButton">New Book</button>
+    <div id="sidebar">
+        <button onclick="homeButton()" id="homeButton">Home</button>
+        <button onclick="displayAllBooksInLibrary()" id="libraryButton">Library</button>
+        <button onclick="showNewBookForm()" id="newBookButton">New Book</button>
+
+        <div id="formContainer"></div>
+
     </div>
-    <div class="cardContainer">
-        <!-- TESTING
+        <div id="cardContainer"></div>
+
+
+    </body>
+
+</html>
+
+<!-- TESTING / TEMPLATES
+        <h1>Hello</h1>
+
          <div class="card">
             <img class="cardPhoto" src="./images/LOTR Book Cover (amazon).jpg">
             <p class="cardTitle">The Lord Of The Rings</p>
@@ -29,9 +40,48 @@
             <button class="cardReadButton">Read</button>
             <button class="cardRemoveButton">X</button>
         </div>
--->
-    </div>
 
-</body>
 
-</html>
+            <p>New book details:</p>
+            <input type="text" id="title" placeholder="Title"></input>
+            <input type="text" id="author" placeholder="Author"></input>
+            <input type="number" id="pages" placeholder="Pages"></input>
+
+            <div id="checkboxcontainer">
+                <label for="read">Read</label>
+                <input type="checkbox" id="read" placeholder="Read"></input>
+            </div>
+            <button>Submit</button> 
+            
+            
+            
+            WITH FORM TAGS
+
+                        <form id="form">
+            <p>New book details:</p>
+            <input type="text" id="title" placeholder="Title"></input>
+            <input type="text" id="author" placeholder="Author"></input>
+            <input type="number" id="pages" placeholder="Pages"></input>
+
+            <div id="checkboxcontainer">
+                <label for="read">Read</label>
+                <input type="checkbox" id="read" placeholder="Read"></input>
+            </div>
+            <button>Submit</button>
+        </form>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            -->
